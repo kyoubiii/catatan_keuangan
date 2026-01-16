@@ -5,6 +5,10 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import com.duid.repository.ITransaksiRepository;
 import com.duid.viewmodel.TransaksiViewModel;
+// Dependency Inversion (SOLID - D): Dengan pabrik ini, MainActivity tidak perlu tahu detail cara membuat ViewModel.
+// MainActivity cukup minta ke pabrik, dan pabrik yang mengurus detailnya.
+
+// File ini adalah "jembatan" yang memungkinkan data mengalir dari Database -> Repository -> ViewModel.
 
 public class ViewModelFactory implements ViewModelProvider.Factory {
     private final ITransaksiRepository repository;

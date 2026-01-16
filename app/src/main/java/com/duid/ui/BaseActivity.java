@@ -8,7 +8,7 @@ import com.duid.di.ViewModelFactory;
 import com.duid.repository.TransaksiRepositoryImpl;
 import com.duid.viewmodel.TransaksiViewModel;
 
-// Pilar 3: Inheritance - Induk untuk semua Activity
+// Pilar Inheritance, Induk untuk semua Activity
 public abstract class BaseActivity extends AppCompatActivity {
     protected TransaksiViewModel viewModel;
 

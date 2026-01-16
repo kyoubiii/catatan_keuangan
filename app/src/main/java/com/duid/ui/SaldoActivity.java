@@ -13,9 +13,6 @@ public class SaldoActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saldo);
-
-        // PERBAIKAN: Hubungkan variabel dengan ID di XML
-        // Pastikan ID ini (tv_saldo_cash, dll) sama persis dengan yang ada di activity_saldo.xml
         tvCash = findViewById(R.id.tv_saldo_cash);
         tvEwallet = findViewById(R.id.tv_saldo_ewallet);
         tvTotalSemua = findViewById(R.id.tv_total_semua);

@@ -4,7 +4,8 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Update;
 
-// Pilar 3: Inheritance - Template dasar untuk semua DAO
+// Pilar Inheritance, Template dasar untuk semua DAO
+// Kita tidak bisa bicara langsung dengan Database (yang bahasanya SQL). DAO adalah perantaranya.
 public interface BaseDao<T> {
     @Insert
     void insert(T obj);

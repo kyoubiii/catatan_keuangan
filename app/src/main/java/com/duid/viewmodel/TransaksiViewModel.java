@@ -6,6 +6,9 @@ import com.duid.model.Transaksi;
 import com.duid.repository.ITransaksiRepository;
 import java.util.List;
 
+// Tanpa file ini, kita harus menulis kode database (dao.insert, dao.query) langsung di dalam MainActivity.
+// Itu akan bikin MainActivity jadi Kusut (Spaghetti Code).
+// Dengan ViewModel, MainActivity kamu jadi bersih dan cuma isinya kode UI saja
 public class TransaksiViewModel extends ViewModel {
     private final ITransaksiRepository repository;
 
@@ -13,7 +16,7 @@ public class TransaksiViewModel extends ViewModel {
         this.repository = repository;
     }
 
-    // PERBAIKAN: Gunakan List biasa (bukan LiveData)
+
     // Kita panggil langsung dari repo agar data selalu segar saat dipanggil
     public List<Transaksi> getTransactions() {
         return repository.getAll();
@@ -32,7 +35,6 @@ public class TransaksiViewModel extends ViewModel {
         return repository.getById(id);
     }
 
-    // Kembali ke double biasa (sesuai interface PenghitungSaldo yang baru)
     public double getBalance(PenghitungSaldo strategi) {
         return strategi.hitung(this.repository);
     }

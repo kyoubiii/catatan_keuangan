@@ -12,7 +12,7 @@ import com.duid.R;
 import com.duid.model.Transaksi;
 import java.util.List;
 
-public class MainActivity extends BaseActivity { // Pilar 3: Inheritance
+public class MainActivity extends BaseActivity { // Pilar Inheritance
 
     private RecyclerView rvTransaksi;
 
@@ -25,7 +25,7 @@ public class MainActivity extends BaseActivity { // Pilar 3: Inheritance
         rvTransaksi.setLayoutManager(new LinearLayoutManager(this));
 
         setupButtons();
-        // Tidak ada lagi observeData() di sini
+
     }
 
     @Override
@@ -69,8 +69,6 @@ public class MainActivity extends BaseActivity { // Pilar 3: Inheritance
                 .setPositiveButton("Ya", (dialog, which) -> {
                     // Eksekusi hapus di database melalui ViewModel
                     viewModel.remove(transaksi);
-
-                    // PENTING: Panggil refreshData secara manual karena datanya tidak otomatis update
                     refreshData();
 
                     Toast.makeText(this, "Berhasil dihapus", Toast.LENGTH_SHORT).show();

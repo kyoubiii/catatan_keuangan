@@ -6,6 +6,7 @@ import com.duid.database.TransaksiDao;
 import com.duid.model.Transaksi;
 import java.util.List;
 
+// polimorfisme dan inheritance
 public class TransaksiRepositoryImpl implements ITransaksiRepository {
     private final TransaksiDao dao;
 

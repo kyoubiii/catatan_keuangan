@@ -11,6 +11,11 @@ import com.duid.R;
 import com.duid.model.Transaksi;
 import java.util.List;
 
+// mengurus tampilan list
+// Bayangkan kamu punya sekantong data transaksi (List Java),
+// tapi RecyclerView (Daftar di Layar HP) tidak mengerti cara menampilkan data mentah tersebut.
+// Nah, Adapter inilah yang bertugas mengambil satu per satu data transaksi,
+// lalu menyusunnya ke dalam tampilan kotak (layout XML) agar bisa dilihat oleh pengguna.
 public class TransaksiAdapter extends RecyclerView.Adapter<TransaksiAdapter.ViewHolder> {
 
     private List<Transaksi> listTransaksi;
@@ -41,7 +46,7 @@ public class TransaksiAdapter extends RecyclerView.Adapter<TransaksiAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Transaksi t = listTransaksi.get(position);
 
-        // Pilar 1: Encapsulation - Memanfaatkan logika internal objek
+        // Pilar Encapsulation, Memanfaatkan logika internal objek
         holder.tvKeterangan.setText(t.getKeterangan());
         holder.tvSumber.setText(t.getSumber());
         holder.tvJumlah.setText(t.getFormattedJumlah());

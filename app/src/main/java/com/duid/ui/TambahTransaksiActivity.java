@@ -61,7 +61,7 @@ public class TambahTransaksiActivity extends BaseActivity { // Menerapkan Inheri
         String jenis = rb.getText().toString();
         String sumber = spSumber.getSelectedItem().toString();
 
-        // Pilar 1: Encapsulation - Membuat objek Transaksi baru
+        // Pilar Encapsulation, Membuat objek Transaksi baru
         Transaksi t = new Transaksi(ket, Double.parseDouble(jumStr), jenis, sumber);
 
         if (editId != -1) {

@@ -7,7 +7,7 @@ import androidx.room.Ignore;
 @Entity(tableName = "tabel_transaksi")
 public class Transaksi extends BaseModel { // Menerapkan Inheritance
 
-    // Gunakan Konstanta (Best Practice agar tidak typo)
+
     public static final String JENIS_PENGELUARAN = "Pengeluaran";
     public static final String JENIS_PEMASUKAN = "Pemasukan";
 
@@ -34,7 +34,7 @@ public class Transaksi extends BaseModel { // Menerapkan Inheritance
         return JENIS_PENGELUARAN.equals(this.jenis) ? Color.RED : Color.parseColor("#4CAF50");
     }
 
-    // Getter tetap ada
+
     public String getKeterangan() {
         return keterangan;
     }
